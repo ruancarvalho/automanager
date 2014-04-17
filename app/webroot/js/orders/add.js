@@ -16,12 +16,15 @@
       
       this.setupButtons();
 
+      this.setupOrderItems();
+
       //$('#OrderDate').attr('type', 'date');
       $('#OrderDate').value = new Date();
     }
 
     App.prototype.setupButtons = function() {
 
+      // Button Add Product
       $('#btnAddItem').click(function() {
         var counter = -1;
 
@@ -34,7 +37,7 @@
             counter++;
 
         cols += '<td><input name="data[OrderItem]['+ counter +'][name]" class="form-control" disabled="disabled" type="text"></td>';
-        cols += '<td><input name="data[OrderItem]['+ counter +'][product_id]" class="form-control" type="text"></td>';
+        cols += '<td><input name="data[OrderItem]['+ counter +'][product_id]" class="form-control item-id" type="text"></td>';
         
         cols += '<td><input name="data[OrderItem]['+ counter +'][quantity]" class="form-control" min="1" step="any" maxlength="8" type="number"></td>';
         cols += '<td><input name="data[OrderItem]['+ counter +'][price]" class="form-control" disabled="disabled" type="text"></td>';
@@ -59,11 +62,21 @@
         return false;
       });
 
-    }
+    } // setupButtons()
+
+    App.prototype.setupOrderItems = function() {
+
+      $(document).on('change', '.item-id', function (e) {
+        
+        // do stuff here
+        console.log('changed');
+      });
+
+    } // setupOrderItems()
 
     return App;
 
-  })();
+  })(); 
 
   $(function() {
     return App = new App();

@@ -37,7 +37,6 @@
 		<td><?php echo h($sale['Order']['total']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $sale['Order']['id']), array('class' => 'btn btn-success btn-xs')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $sale['Order']['id']), array('class' => 'btn btn-warning btn-xs')); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $sale['Order']['id']), array('class' => 'btn btn-danger btn-xs'), __('Are you sure you want to delete # %s?', $sale['Order']['id'])); ?>
 		</td>
 	</tr>
