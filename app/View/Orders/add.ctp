@@ -75,7 +75,7 @@ $type = array(
                     <tr>
                         <td><?php echo $this->Form->input('OrderItem.'. $i .'.name', array('class' => 'form-control', 'disabled' => true, 'label' => false, 'value' => $type[$i])); ?></td>
                         <td><?php echo $this->Form->input('OrderItem.'. $i .'.product_id', array('class' => 'item-id', 'label' => false, 'type' => 'text')); ?></td>
-                        <td><?php echo $this->Form->input('OrderItem.'. $i .'.quantity', array('class' => 'form-control', 'label' => false, 'min' => 1)); ?></td>
+                        <td><?php echo $this->Form->input('OrderItem.'. $i .'.quantity', array('class' => 'form-control', 'label' => false, 'min' => 0.1)); ?></td>
                         <td><?php echo $this->Form->input('OrderItem.'. $i .'.price', array('class' => 'form-control', 'disabled' => true, 'label' => false)); ?></td>
                         <td class="actions">
                                 <?php echo $this->Form->button(__('Remove'), array(

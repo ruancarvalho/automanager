@@ -727,3 +727,11 @@ msgstr "Vendas"
 msgid "New Order"
 msgstr "Nova Venda"
 
+msgid "View Order"
+msgstr "Visualizar Venda"
+
+msgid "Order Items"
+msgstr "Itens da Venda"
+
+msgid "Notes"
+msgstr "Observações"

@@ -15,7 +15,7 @@
  </div>
 <hr />
 <div id="orders-container" class="row">
-	<div id="page-content" class="col-sm-9">
+	<div id="page-content" class="col-md-12">
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered">
 			<tbody>
@@ -42,11 +42,7 @@
 			<tr>		
 				<td><strong><?php echo __('Phone'); ?></strong></td>
 				<td><?php echo h($order['Order']['phone']); ?>&nbsp;</td>
-			</tr>
-			<tr>		
-				<td><strong><?php echo __('Discount'); ?></strong></td>
-				<td><?php echo h($order['Order']['discount']); ?>&nbsp;</td>
-			</tr>			
+			</tr>	
 			</tbody>
 			</table><!-- /.table table-striped table-bordered -->
 		</div><!-- /.table-responsive -->
@@ -71,16 +67,36 @@
 					<td><?php echo $productSale['Product']['name']; ?></td>
 					<td><?php echo $productSale['Product']['id']; ?></td>
 					<td><?php echo $productSale['quantity']; ?></td>
-					<td><?php echo $productSale['price']; ?></td>
-					<td><strong>R$ <?php echo $productSale['price'] * $productSale['quantity']; ?></strong></td>
+					<td><?php echo $this->Number->currency($productSale['price'], 'BRL'); ?></td>
+					<td><strong><?php echo $this->Number->currency($productSale['price'] * $productSale['quantity'], 'BRL'); ?></strong></td>
 				</tr>
 <?php endforeach; ?>
 				</tbody>
 				</table><!-- /.table table-striped table-bordered -->
 			</div><!-- /.table-responsive -->
 					
-			<?php endif; ?>		
+			<?php endif; ?>
 		</div><!-- /.related -->	
+		<hr />
+		<div class="row"  class="col-md-12">
+			<div class="col-md-8">
+				<dl class="dl-horizontal">
+					<dt><?php echo __('Notes'); ?></dt>
+					<dd><?php echo h($order['Order']['notes']); ?></dd>
+				</dl>
+			</div>
+			<div class="col-md-4">			
+				<dl class="dl-horizontal">
+					<dt><?php echo __('Sub-Total'); ?></dt>
+					<dd><?php echo $this->Number->currency($order['Order']['total'], 'BRL'); ?></dd>
+					<dt><?php echo __('Desconto'); ?></dt>
+					<dd><?php echo $this->Number->currency($order['Order']['discount'], 'BRL'); ?></dd>
+					<dt><?php echo __('Total'); ?></dt>
+					<dd><?php echo $this->Number->currency($order['Order']['total'] - $order['Order']['discount'], 'BRL'); ?></dd>
+				</dl>
+			</div>
+		</div>
+	  	
 	</div><!-- /#page-content .span9 -->
 </div><!-- /#page-container .row-fluid -->
 

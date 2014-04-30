@@ -39,7 +39,8 @@ class AppController extends Controller
 
   public $components = array('Auth','Session','Error','Cookie','MobileDetect');
   public $uses = array('User');
-  public $helpers = array('CakeStrap' => array('className' => 'CakeStrapHtml'),
+  public $helpers = array('Number',
+                          'CakeStrap' => array('className' => 'CakeStrapHtml'),
                           'Form' => array('className' => 'CakeStrapForm'));
 
 
@@ -89,6 +90,8 @@ class AppController extends Controller
 
     # To enable portuguese language as main
     Configure::write('Config.language', 'por');
+
+    CakeNumber::addFormat('BRL', array('before' => 'R$ ', 'thousands' => '.', 'decimals' => ','));
   }
 
   public function beforeRender() {
@@ -105,7 +108,7 @@ class AppController extends Controller
   /**
    *  Se a requisição for mobile ou tablet e existir o(s) arquivo(s)
    *  da view e/ou layout para serem redenrizados
-   */
+   *//*
     if (isset($this->isMobile) && $this->isMobile) {
       if (is_file(APP . 'View' . DS . 'Layouts' . DS . 'mobile' . DS . $this->layout . '.ctp')) {
         $this->layout = 'mobile/'. $this->layout;
@@ -121,8 +124,8 @@ class AppController extends Controller
       if (is_file(APP . 'View' . DS . $this->name . DS . 'tablet' . DS . $this->action . '.ctp')) {
           $this->render('tablet/' . $this->action);
       } 
-    }
-    
+    }*/
+   
     // Seta as variaveis para serem usadas na view
     $this->set(array(
       'base_url'  => Router::url('/',true),

@@ -78,6 +78,8 @@ class OrdersController extends AppController {
                     }
                 }
 
+                //$total = $total - $this->data['discount'];
+
                 // Atualiza o Valor Total da Venda
                 $this->Order->saveField('total', $total);				
 
