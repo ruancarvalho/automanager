@@ -7,6 +7,15 @@ App::uses('AppController', 'Controller');
  */
 class OrdersController extends AppController {
 
+    public $components = array('Paginator');
+
+    public $paginate = array(
+        'limit' => 20,
+        'order' => array(
+            'Order.date' => 'desc'
+        )
+    );
+
     public $helpers = array('Js' => array('Jquery'));
 
     /**
@@ -15,8 +24,11 @@ class OrdersController extends AppController {
      * @return void
      */
     public function index() {
-            $this->Order->recursive = 0;
-            $this->set('orders', $this->paginate());
+
+        $this->Paginator->settings = $this->paginate;
+
+        $this->Order->recursive = 0;
+        $this->set('orders', $this->Paginator->paginate());
     }
 
     /**

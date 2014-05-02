@@ -31,10 +31,10 @@
 					<tbody>
 <?php foreach ($orders as $sale): ?>
 	<tr>
-		<td><?php echo h($sale['Order']['date']); ?>&nbsp;</td>
+		<td><?php echo h($this->Time->format($sale['Order']['date'], '%e/%m/%Y')); ?>&nbsp;</td>
 		<td><?php echo h($sale['Order']['vehicle']); ?>&nbsp;</td>
 		<td><?php echo h($sale['Order']['customer']); ?>&nbsp;</td>
-		<td><?php echo h($sale['Order']['total']); ?>&nbsp;</td>
+		<td><?php echo $this->Number->currency($sale['Order']['total'], 'BRL'); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $sale['Order']['id']), array('class' => 'btn btn-success btn-xs')); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $sale['Order']['id']), array('class' => 'btn btn-danger btn-xs'), __('Are you sure you want to delete # %s?', $sale['Order']['id'])); ?>

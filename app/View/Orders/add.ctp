@@ -40,7 +40,7 @@ $type = array(
             </div><!-- .form-group -->
 
             <div class="form-group col-md-2">
-                <?php echo $this->Form->input('km', array('class' => 'form-control', 'min' => 1)); ?>
+                <?php echo $this->Form->input('km', array('class' => 'form-control')); ?>
             </div><!-- .form-group -->
 
             <div class="form-group col-md-2">
