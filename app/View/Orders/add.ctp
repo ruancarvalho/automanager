@@ -64,7 +64,7 @@ $type = array(
                 <table id="products-table" class="table table-hover table-striped">
                     <tbody>
                     <tr>
-                        <th><?php echo __('Product'); ?></th>
+                        <th width="50%"><?php echo __('Product'); ?></th>
                         <th><?php echo __('Code'); ?></th>
                         <th><?php echo __('Quantity'); ?></th>
                         <th><?php echo __('Price'); ?></th>

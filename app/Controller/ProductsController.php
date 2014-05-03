@@ -7,6 +7,8 @@ App::uses('AppController', 'Controller');
  */
 class ProductsController extends AppController {
 
+	public $components = array('RequestHandler');
+
     public $helpers = array('Js' => array('Jquery'));
 
     public $paginate = array(
@@ -14,6 +16,19 @@ class ProductsController extends AppController {
             'Product.created' => 'asc'
         )
     );
+
+    public function test() {
+
+    	$product_id = $this->request->data['id'];
+
+        $data = $this->Product->find('first', array(
+            'conditions'=>array(
+                'Product.id'=>$product_id
+            ))
+        );
+
+        $this->set('data', $data);
+    }
 
 /**
  * index method

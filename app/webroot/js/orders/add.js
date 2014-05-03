@@ -15,7 +15,6 @@
     App.prototype.initialize = function() {
       
       this.setupButtons();
-
       this.setupOrderItems();
 
       //$('#OrderDate').attr('type', 'date');
@@ -70,6 +69,20 @@
         
         // do stuff here
         console.log('changed');
+
+        $.ajax({
+            dataType: "HTML",
+            type: "POST",
+            evalScripts: true,
+            //url: '/automanager/orders/test' ,
+            url: '/automanager/products/test',
+            data: ({id:'2827'}),
+            success: function (data, textStatus){
+                $("#OrderItem0Name").val(data);
+
+            }
+        });
+
       });
 
     } // setupOrderItems()
