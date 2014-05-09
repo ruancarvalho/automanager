@@ -90,11 +90,9 @@ class OrdersController extends AppController {
                     }
                 }
 
-                //$total = $total - $this->data['discount'];
-
-                // Atualiza o Valor Total da Venda
+                // Atualiza o Valor Total da Venda com Desconto
+                $total = $total - $this->data['Order']['discount'];                
                 $this->Order->saveField('total', $total);				
-
 
                 $this->Session->setFlash(__('The order has been saved'), 'flash/success');
                 $this->redirect(array('action' => 'view', $this->Order->id));

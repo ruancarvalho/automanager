@@ -7,8 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class ProductsController extends AppController {
 
-	public $components = array('RequestHandler');
-
+	public $components = array('RequestHandler', 'Paginator');
     public $helpers = array('Js' => array('Jquery'));
 
     public $paginate = array(
@@ -17,14 +16,18 @@ class ProductsController extends AppController {
         )
     );
 
-    public function test() {
+    public function info() {
+
+    	$this->layout = null;
 
     	$product_id = $this->request->data['id'];
 
         $data = $this->Product->find('first', array(
             'conditions'=>array(
                 'Product.id'=>$product_id
-            ))
+            ),
+            'fields' => array('Product.name', 'Product.price'),
+            )
         );
 
         $this->set('data', $data);
@@ -36,8 +39,14 @@ class ProductsController extends AppController {
  * @return void
  */
 	public function index() {
+
+		$this->Paginator->settings = $this->paginate;
+
 		$this->Product->recursive = 0;
-		$this->set('products', $this->paginate());
+		//$this->set('products', $this->Paginator->paginate());
+		// similar to findAll(), but fetches paged results
+    	$data = $this->Paginator->paginate('Product');
+    	$this->set('products', $data);
 	}
 
 /**

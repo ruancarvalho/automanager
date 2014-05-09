@@ -96,6 +96,16 @@ msgstr "Autor"
 msgid "Submit"
 msgstr "Enviar"
 
+msgid "Search"
+msgstr "Pesquisar"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Próximo"
+
+
 #: View/Emails/html/remember_password.ctp:3
 msgid "Register new password"
 msgstr "Cadastrar nova senha"
@@ -358,7 +368,10 @@ msgstr "Marcas"
 #: View/Products/edit.ctp:23
 #: View/Products/view.ctp:61
 msgid "List Products"
-msgstr "Lista de Produtos"
+msgstr "Produtos"
+
+msgid "Search Products"
+msgstr "Pesquisar Produtos"
 
 #: View/Brands/add.ctp:17
 #: View/Brands/edit.ctp:19

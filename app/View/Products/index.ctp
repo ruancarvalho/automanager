@@ -1,15 +1,31 @@
+<?php echo $this->Html->script('lib/jquery'); ?>
+
 <div class="row">
-	<div class="col-lg-10">
-		<h3><?php echo __('Products'); ?></h3>
+	<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-3"><h3><?php echo __('Products'); ?></h3></div>
+			<div class="col-md-1">
+		<?php echo $this->Html->link(__('Add Product'),'/products/add',array('class' => 'btn btn-primary btn-sm','style' => 'margin-top: 15px')) ?>
+		</div>
+		</div>
 	</div>
-	<div class="col-lg-2">
-    	<?php echo $this->Html->link(__('Add Product'),'/products/add',array('class' => 'btn btn-default pull-right','style' => 'margin-top: 15px')) ?>
+	<div class="col-md-4 pull-right">    	
+		<form class="form-inline pull-right" role="search" style="margin-top: 15px">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="<?php echo __('Search Products'); ?>">
+			</div>
+			<button type="button" class="btn btn-default"><?php echo __('Search'); ?></button>
+		</form>
+    	
   	</div>
- </div>
+</div>
+
 <hr />
+
 <div class="row">
 	<div class="col-sm-12">		
-	<?php echo $this->Session->flash() ?>
+		<?php echo $this->Session->flash() ?>
+
 		<div class="table-responsive">
 			<table cellpadding="0" cellspacing="0" class="table table-striped">
 				<thead>
@@ -46,7 +62,8 @@
 			</table>
 		</div><!-- /.table-responsive -->
 
-		<div class="container">
+		<div class="clearfix"> </div>
+		<div class="row center-block">
 			<p><small>
 				<?php
 					echo $this->Paginator->counter(array(
@@ -57,6 +74,11 @@
 
 			<ul class="pagination">
 				<?php
+					$this->Paginator->options(array(
+				    	'update' => '#page-wrapper',
+				    	'evalScripts' => true
+					));
+
 					echo $this->Paginator->prev('< ' . __('Previous'), array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));
 					echo $this->Paginator->numbers(array('separator' => '', 'currentTag' => 'a', 'tag' => 'li', 'currentClass' => 'disabled'));
 					echo $this->Paginator->next(__('Next') . ' >', array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));
@@ -65,3 +87,5 @@
 		</div>
 	</div><!-- /#page-content .col-sm-9 -->
 </div><!-- /#page-container .row-fluid -->
+
+<?php echo $this->Js->writeBuffer(); ?>

@@ -88,11 +88,11 @@
 			<div class="col-md-4">			
 				<dl class="dl-horizontal">
 					<dt><?php echo __('Sub-Total'); ?></dt>
-					<dd><?php echo $this->Number->currency($order['Order']['total'], 'BRL'); ?></dd>
+					<dd><?php echo $this->Number->currency($order['Order']['total'] + $order['Order']['discount'], 'BRL'); ?></dd>
 					<dt><?php echo __('Desconto'); ?></dt>
 					<dd><?php echo $this->Number->currency($order['Order']['discount'], 'BRL'); ?></dd>
 					<dt><?php echo __('Total'); ?></dt>
-					<dd><?php echo $this->Number->currency($order['Order']['total'] - $order['Order']['discount'], 'BRL'); ?></dd>
+					<dd><?php echo $this->Number->currency($order['Order']['total'], 'BRL'); ?></dd>
 				</dl>
 			</div>
 		</div>

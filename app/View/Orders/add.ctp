@@ -68,6 +68,7 @@ $type = array(
                         <th><?php echo __('Code'); ?></th>
                         <th><?php echo __('Quantity'); ?></th>
                         <th><?php echo __('Price'); ?></th>
+                        <th><?php echo __('Total'); ?></th>
                         <th class="actions"><?php echo __('Actions'); ?></th>
                     </tr>
 
@@ -75,8 +76,9 @@ $type = array(
                     <tr>
                         <td><?php echo $this->Form->input('OrderItem.'. $i .'.name', array('class' => 'form-control', 'disabled' => true, 'label' => false, 'value' => $type[$i])); ?></td>
                         <td><?php echo $this->Form->input('OrderItem.'. $i .'.product_id', array('class' => 'item-id', 'label' => false, 'type' => 'text')); ?></td>
-                        <td><?php echo $this->Form->input('OrderItem.'. $i .'.quantity', array('class' => 'form-control', 'label' => false, 'min' => 0.1)); ?></td>
+                        <td><?php echo $this->Form->input('OrderItem.'. $i .'.quantity', array('class' => 'item-quantity', 'label' => false, 'min' => 0.1)); ?></td>
                         <td><?php echo $this->Form->input('OrderItem.'. $i .'.price', array('class' => 'form-control', 'disabled' => true, 'label' => false)); ?></td>
+                        <td><?php echo $this->Form->input('OrderItem.'. $i .'.subtotal', array('class' => 'item-total', 'disabled' => true, 'label' => false)); ?></td>
                         <td class="actions">
                                 <?php echo $this->Form->button(__('Remove'), array(
                                         'class' => 'btn btn-large btn-danger btn-remove-item', 
@@ -90,7 +92,12 @@ $type = array(
                     <tfoot>
                         <tr>
                             <td colspan="5" style="text-align: left;">
-                                <button id="btnAddItem" class="btn btn-large btn-success" type="button">Add Product</button>
+                                <?php echo $this->Form->button(__('Add Product'), array(
+                                        'class' => 'btn btn-large btn-success', 
+                                        'type' => 'button',
+                                        'id' => 'btnAddItem'
+                                )); ?>
+                                
                             </td>
                         </tr>
                     </tfoot>
@@ -106,7 +113,7 @@ $type = array(
 
             <div class="form-group col-md-4">
                 <?php echo $this->Form->input('discount', array('class' => 'form-control', 'value' => 0)); ?>
-                <?php echo $this->Form->input('total', array('class' => 'form-control', 'disabled' => true)); ?>
+                <?php echo $this->Form->input('total', array('class' => 'form-control', 'value' => 0, 'disabled' => true)); ?>
             </div>
 
             <hr />
