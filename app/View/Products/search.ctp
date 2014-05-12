@@ -1,5 +1,3 @@
-<?php echo $this->Html->script('lib/jquery'); ?>
-
 <div class="row">
 	<div class="col-md-4">
 		<div class="row">
@@ -9,7 +7,7 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-4 pull-right">
+	<div class="col-md-4 pull-right">    	
 		<?php echo $this->Form->create(false, array('action' => 'search', 'class' => 'form-inline pull-right', 'style' => 'margin-top: 15px')); ?>
 			<?php echo $this->Form->input('Search Products', array('label' => false, 'placeholder' => __('Search Products'))); ?>
 		<?php echo $this->Form->end(__('Search')); ?>
@@ -83,5 +81,3 @@
 		</div>
 	</div><!-- /#page-content .col-sm-9 -->
 </div><!-- /#page-container .row-fluid -->
-
-<?php echo $this->Js->writeBuffer(); ?>

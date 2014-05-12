@@ -33,6 +33,33 @@ class ProductsController extends AppController {
         $this->set('data', $data);
     }
 
+	/**
+	 *
+	 */
+    public function search() {
+
+        if (!$this->request->is('post')) {
+			throw new MethodNotAllowedException();
+		}
+
+		if (!empty($this->request->data)) {
+        	$query = $this->request->data['Search Products'];
+	    } else {
+	        $this->Session->setFlash(__('Product not found. Please, try again.'), 'flash/error');
+			$this->redirect(array('action' => 'index'));
+	    }
+
+        $this->Paginator->settings = $this->paginate;
+		$this->Product->recursive = 0;
+
+		$data = $this->Paginator->paginate(
+		    'Product',
+		    array('Product.name LIKE' => '%' . $query . '%')
+		);
+
+    	$this->set('products', $data);
+    }
+
 /**
  * index method
  *

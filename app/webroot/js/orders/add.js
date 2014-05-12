@@ -96,7 +96,7 @@
             type: "POST",
             evalScripts: true,
             //url: '/automanager/orders/test' ,
-            url: '/automanager/products/test',
+            url: '/automanager/products/info',
             data: ({id:input}),
             success: function (data, textStatus){
 
