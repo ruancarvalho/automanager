@@ -33,7 +33,7 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
-	Configure::write('debug', 2);
+	Configure::write('debug', 0);
 	
 	// Carrega arquivos do projeto
 	if (file_exists(APP . 'Config' . DS . 'config.php')) {	
@@ -135,7 +135,7 @@ Configure::write('Routing.prefixes', array('admin'));
  * Turn off all caching application-wide.
  *
  */
-	//Configure::write('Cache.disable', true);
+	Configure::write('Cache.disable', true);
 
 /**
  * Enable cache checking.
@@ -247,7 +247,7 @@ Configure::write('Routing.prefixes', array('admin'));
  * Uncomment this line and correct your server timezone to fix
  * any date & time related errors.
  */
-	//date_default_timezone_set('UTC');
+	date_default_timezone_set('UTC');
 
 /**
  *

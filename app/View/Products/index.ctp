@@ -27,7 +27,6 @@
 				<thead>
 					<tr>
 						<th><?php echo $this->Paginator->sort('ID'); ?></th>
-						<th><?php echo $this->Paginator->sort('code'); ?></th>
 						<th><?php echo $this->Paginator->sort('name'); ?></th>
 						<th><?php echo $this->Paginator->sort('brand_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('quantity'); ?></th>
@@ -40,7 +39,6 @@
 <?php foreach ($products as $product): ?>
 <tr>
 	<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
-	<td><?php echo h($product['Product']['code']); ?>&nbsp;</td>
 	<td><?php echo h($product['Product']['name']); ?>
 	<td>
 		<?php echo $this->Html->link($product['Brand']['name'], array('controller' => 'brands', 'action' => 'view', $product['Brand']['id'])); ?>

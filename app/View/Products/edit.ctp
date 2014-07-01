@@ -44,7 +44,20 @@
 			<?php echo $this->Form->end(); ?>
 
 		</div><!-- /.form -->
+
+		<hr>
+
+		<?php echo __('Last Modified:'); ?>
+
+		<?php echo $this->Time->format(
+					'd M Y - H:i',
+				  	$this->data['Product']['modified'],
+				  	null,
+				  	'America/Manaus'
+				);
+		?>
 			
 	</div><!-- /#page-content .col-sm-9 -->
 
 </div><!-- /#page-container .row-fluid -->
+

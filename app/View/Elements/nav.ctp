@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top hidden-print" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -38,6 +38,8 @@
 						<li><a href="<?php echo $this->params->webroot?>products"><i class="fa fa-list"></i> <?php echo __('List'); ?></a></li>
 						<li><a href="<?php echo $this->params->webroot?>products/add"><i class="fa fa-plus"></i> <?php echo __('New Product'); ?></a></li>
 						<li><a href="<?php echo $this->params->webroot?>brands"><i class="fa fa-list"></i> <?php echo __('Brands'); ?></a></li>
+
+						<li><a href="<?php echo $this->params->webroot?>products/table"><i class="fa fa-list"></i> <?php echo __('Prices Table'); ?></a></li>
 					</ul>
 				</li>
 	

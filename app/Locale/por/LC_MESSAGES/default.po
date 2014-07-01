@@ -748,3 +748,6 @@ msgstr "Itens da Venda"
 
 msgid "Notes"
 msgstr "Observações"
+
+msgid "Prices Table"
+msgstr "Tabela de Preços"

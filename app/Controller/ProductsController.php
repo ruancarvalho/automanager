@@ -118,6 +118,7 @@ class ProductsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->Product->recursive = -1;
         $this->Product->id = $id;
 		if (!$this->Product->exists($id)) {
 			throw new NotFoundException(__('Invalid product'));
@@ -159,5 +160,11 @@ class ProductsController extends AppController {
 		}
 		$this->Session->setFlash(__('Product was not deleted'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
+	}
+
+	public function table() {	
+
+		$this->Product->recursive = 0;
+    	$this->set('products', $this->Product->find('all'));
 	}
 }
