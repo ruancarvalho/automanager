@@ -16,6 +16,8 @@ class OrdersController extends AppController {
         )
     );
 
+    public $uses = array('Order', 'Method', 'OrderPayment');
+
     public $helpers = array('Js' => array('Jquery'));
 
     /**
@@ -94,8 +96,8 @@ class OrdersController extends AppController {
                 $total = $total - $this->data['Order']['discount'];                
                 $this->Order->saveField('total', $total);				
 
-                $this->Session->setFlash(__('The order has been saved'), 'flash/success');
-                $this->redirect(array('action' => 'view', $this->Order->id));
+                //$this->Session->setFlash(__('The order has been saved'), 'flash/success');
+                $this->redirect(array('action' => 'checkout', $this->Order->id));
              
 
             } else {
@@ -162,4 +164,48 @@ class OrdersController extends AppController {
 		$this->Session->setFlash(__('Order was not deleted'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
 	}
+
+/**
+ * checkout method
+ *
+ * @throws NotFoundException
+ * @throws MethodNotAllowedException
+ * @param string $id
+ * @return void
+ */
+    public function checkout($id = null) {
+
+        $this->Order->id = $id;
+        if (!$this->Order->exists()) {
+            throw new NotFoundException(__('Invalid order'));
+        }
+
+        if ($this->request->is('post') || $this->request->is('put')) {
+
+            $data = $this->request->data['OrderPayment'];
+            foreach ($data as $payment) {
+
+                if ($payment['amount'] > 0) {
+                    $this->Order->OrderPayment->create();
+                    $this->Order->OrderPayment->save($payment);
+                }
+            }
+
+            $this->Session->setFlash(__('The payment has been saved'), 'flash/success');
+            $this->redirect(array('action' => 'view', $id));
+
+        } else {
+            $this->Order->recursive = 2;
+            $options = array('conditions' => array('Order.' . $this->Order->primaryKey => $id));
+            $this->request->data = $this->Order->find('first', $options);
+
+            $order   = $this->request->data;
+            $methods = $this->Method->find('all');
+            $count   = count($methods);
+
+            $this->set(compact('methods'));
+            $this->set(compact('count'));
+            $this->set(compact('order'));
+        }
+    }
 }

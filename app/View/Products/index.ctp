@@ -26,13 +26,12 @@
 			<table cellpadding="0" cellspacing="0" class="table table-striped">
 				<thead>
 					<tr>
-						<th><?php echo $this->Paginator->sort('ID'); ?></th>
+						<th width="5%"><?php echo $this->Paginator->sort('ID'); ?></th>
 						<th><?php echo $this->Paginator->sort('name'); ?></th>
-						<th><?php echo $this->Paginator->sort('brand_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('quantity'); ?></th>
-						<th><?php echo $this->Paginator->sort('minimum_price'); ?></th>
-						<th><?php echo $this->Paginator->sort('price'); ?></th>
-						<th class="actions"><?php echo __('Actions'); ?></th>
+						<th width="10%"><?php echo $this->Paginator->sort('brand_id'); ?></th>
+						<th width="10%"><?php echo $this->Paginator->sort('quantity'); ?></th>
+						<th width="10%"><?php echo $this->Paginator->sort('price'); ?></th>
+						<th class="actions" width="10%"><?php echo __('Actions'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -44,7 +43,6 @@
 		<?php echo $this->Html->link($product['Brand']['name'], array('controller' => 'brands', 'action' => 'view', $product['Brand']['id'])); ?>
 	</td>
 	<td><?php echo h($product['Product']['quantity']); ?>&nbsp;</td>
-	<td>R$ <?php echo h($product['Product']['minimum_price']); ?>&nbsp;</td>
 	<td>R$ <?php echo h($product['Product']['price']); ?>&nbsp;</td>
 	<td class="actions">
 		<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $product['Product']['id']), array('class' => 'btn btn-warning btn-xs')); ?>

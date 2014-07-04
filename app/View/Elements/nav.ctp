@@ -22,20 +22,22 @@
 
 				<!-- Orders -->
 				<li class="dropdown <?php echo $this->params->params['controller'] == 'orders' ? 'active' : ''?>">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i> <?php echo __('Orders'); ?> <b
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i> <?php echo __('Loja'); ?> <b
 							class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->params->webroot?>orders"><i class="fa fa-list"></i> <?php echo __('List'); ?> </a></li>
+						<li><a href="<?php echo $this->params->webroot?>orders"><i class="fa fa-list"></i> <?php echo __('Orders'); ?> </a></li>
 						<li><a href="<?php echo $this->params->webroot?>orders/add"><i class="fa fa-plus"></i> <?php echo __('New Order'); ?> </a></li>
+
+						<li><a href="<?php echo $this->params->webroot?>methods"><i class="fa fa-list"></i> <?php echo __('Methods'); ?> </a></li>
 					</ul>
 				</li>
 
 				<!-- Products -->
 				<li class="dropdown <?php echo $this->params->params['controller'] == 'products' ? 'active' : ''?>">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i> <?php echo __('Products'); ?> <b
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i> <?php echo __('Inventory'); ?> <b
 							class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->params->webroot?>products"><i class="fa fa-list"></i> <?php echo __('List'); ?></a></li>
+						<li><a href="<?php echo $this->params->webroot?>products"><i class="fa fa-list"></i> <?php echo __('Products'); ?></a></li>
 						<li><a href="<?php echo $this->params->webroot?>products/add"><i class="fa fa-plus"></i> <?php echo __('New Product'); ?></a></li>
 						<li><a href="<?php echo $this->params->webroot?>brands"><i class="fa fa-list"></i> <?php echo __('Brands'); ?></a></li>
 
@@ -43,13 +45,12 @@
 					</ul>
 				</li>
 	
-				<!-- Users -->
+				<!-- Configs -->
 				<li class="dropdown <?php echo $this->params->params['controller'] == 'users' ? 'active' : ''?>">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users"></i> Users <b
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users"></i> Config <b
 							class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->params->webroot?>users"><i class="fa fa-list"></i> List</a></li>
-						<li><a href="<?php echo $this->params->webroot?>users/add"><i class="fa fa-plus"></i> Register new user</a></li>
+						<li><a href="<?php echo $this->params->webroot?>users"><i class="fa"></i>Users</a></li>
 					</ul>
 				</li>
 <!--				<li><a href="tables.html"><i class="fa fa-list"></i> Activity</a></li>-->

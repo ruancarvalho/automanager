@@ -20,8 +20,8 @@ class Order extends AppModel {
 				'decimal' => array(
 					'rule' => array('decimal'),
 					//'message' => 'Your custom message here',
-					'allowEmpty' => false,
-					'required' => true,
+					'allowEmpty' => true,
+					'required' => false,
 					//'last' => false, // Stop validation after this rule
 					//'on' => 'create', // Limit validation to 'create' or 'update' operations
 				),
@@ -52,6 +52,7 @@ class Order extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'OrderItem'
+		'OrderItem',
+		'OrderPayment'
 	);
 }

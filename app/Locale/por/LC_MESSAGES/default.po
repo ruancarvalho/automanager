@@ -350,6 +350,40 @@ msgstr "OK"
 msgid "Actions"
 msgstr "Ações"
 
+msgid "Save"
+msgstr "Salvar"
+
+#: ----------------------------------------------------------------------------
+#: VENDAS
+
+msgid "Methods"
+msgstr "Formas de Pagamento"
+
+msgid "Add Method"
+msgstr "Adicionar Forma de Pagamento"
+
+msgid "Payment Methods"
+msgstr "Formas de Pagamento"
+
+msgid "Fee"
+msgstr "Taxa"
+
+msgid "Days"
+msgstr "Dias"
+
+msgid "List Orders"
+msgstr "Lista de Vendas"
+
+msgid "Add Order"
+msgstr "Adicionar Venda"
+
+
+#: ----------------------------------------------------------------------------
+#: ESTOQUE
+
+msgid "Inventory"
+msgstr "Estoque"
+
 #: View/Brands/add.ctp:15
 #: View/Brands/edit.ctp:17
 #: View/Brands/view.ctp:31

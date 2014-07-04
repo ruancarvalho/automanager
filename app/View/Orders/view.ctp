@@ -1,13 +1,13 @@
 <div class="row">
 	<div class="col-lg-8">
-		<h3><?php echo __('View Order') . ' #' . h($order['Order']['id']); ?></h3>
+		<h3><?php echo __('Order') . ' #' . h($order['Order']['id']); ?></h3>
 	</div>
 	<div class="col-lg-4">
 		<div class="row">
 			<div class="col-md-8">
 
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 hidden-print">
 				<?php echo $this->Html->link(__('List Orders'),'/orders',array('class' => 'btn btn-info pull-right','style' => 'margin-top: 15px')) ?>
 			</div>
 		</div>
