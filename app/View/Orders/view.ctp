@@ -29,15 +29,15 @@
 			</tr>
 			<tr>
 				<td><strong><?php echo __('Vehicle'); ?></strong></td>
-				<td><?php echo h($order['Order']['vehicle']); ?>&nbsp;</td>
+				<td><?php echo h($order['Vehicle']['model']); ?>&nbsp;</td>
 			</tr>
 			<tr>
 				<td><strong><?php echo __('Plate'); ?></strong></td>
-				<td><?php echo h($order['Order']['plate']); ?>&nbsp;</td>
+				<td><?php echo h($order['Vehicle']['vin']); ?>&nbsp;</td>
 			</tr>
 			<tr>		
 				<td><strong><?php echo __('Customer'); ?></strong></td>
-				<td><?php echo h($order['Order']['customer']); ?>&nbsp;</td>
+				<td><?php echo h($order['Customer']['name']); ?>&nbsp;</td>
 			</tr>
 			<tr>		
 				<td><strong><?php echo __('Phone'); ?></strong></td>

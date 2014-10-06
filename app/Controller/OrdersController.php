@@ -7,16 +7,19 @@ App::uses('AppController', 'Controller');
  */
 class OrdersController extends AppController {
 
+    //var $scaffold;
+
     public $components = array('Paginator');
 
     public $paginate = array(
         'limit' => 20,
         'order' => array(
-            'Order.date' => 'desc'
+            'Order.date' => 'desc',
+            'Order.id' => 'desc'
         )
     );
 
-    public $uses = array('Order', 'Method', 'OrderPayment');
+    public $uses = array('Order', 'Method', 'Product', 'OrderPayment', 'Vehicle', 'Customer');
 
     public $helpers = array('Js' => array('Jquery'));
 
@@ -29,7 +32,7 @@ class OrdersController extends AppController {
 
         $this->Paginator->settings = $this->paginate;
 
-        $this->Order->recursive = 0;
+        $this->Order->recursive = 2;
         $this->set('orders', $this->Paginator->paginate());
     }
 
@@ -57,6 +60,8 @@ class OrdersController extends AppController {
      * @return void
      */
     public function add() {
+
+
             
         if ($this->request->is('post')) {
             
@@ -80,6 +85,9 @@ class OrdersController extends AppController {
                             $this->Session->setFlash(__('Product not Found'), 'flash/error');
                             $this->redirect(array('action' => 'index'));
                         }
+                        
+                        $this->Product->id = $product['Product']['id'];
+                        $this->Product->issue($item['quantity']);
 
                         $item['order_id'] = $this->Order->id;
                         $item['price'] = $product['Product']['price'];
@@ -97,8 +105,8 @@ class OrdersController extends AppController {
                 $this->Order->saveField('total', $total);				
 
                 //$this->Session->setFlash(__('The order has been saved'), 'flash/success');
-                $this->redirect(array('action' => 'checkout', $this->Order->id));
-             
+                //$this->redirect(array('action' => 'checkout', $this->Order->id));
+                debug($this->data);
 
             } else {
                 $this->Session->setFlash(
@@ -110,6 +118,10 @@ class OrdersController extends AppController {
             $order = $this->Order;
             $this->set(compact('order'));
         }
+
+        $this->set('vehicles', $this->Order->Vehicle->find('list', array('order' => 'Vehicle.vin ASC')));
+        $this->set('customers', $this->Order->Customer->find('list'));
+
         $companies = $this->Order->Company->find('list');
         $this->set(compact('companies'));
     }
@@ -157,6 +169,9 @@ class OrdersController extends AppController {
 		if (!$this->Order->exists()) {
 			throw new NotFoundException(__('Invalid order'));
 		}
+		
+		
+		
 		if ($this->Order->delete()) {
 			$this->Session->setFlash(__('Order deleted'), 'flash/success');
 			$this->redirect(array('action' => 'index'));

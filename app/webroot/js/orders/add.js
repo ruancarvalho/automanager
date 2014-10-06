@@ -95,8 +95,7 @@
             dataType: "HTML",
             type: "POST",
             evalScripts: true,
-            //url: '/automanager/orders/test' ,
-            url: '/automanager/products/info',
+            url: '/products/info',
             data: ({id:input}),
             success: function (data, textStatus){
 

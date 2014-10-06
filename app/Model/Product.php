@@ -98,4 +98,34 @@ class Product extends AppModel {
 	public $hasMany = array(
 		'OrderItem'
 	);
+	
+    /**
+     * A product issue is a goods movement that is used to post the internal use 
+     * of material, the issuing of material and the shipment of goods to a 
+     * customer. 
+     *  
+     * A product issue results in a decrease of stock in the warehouse.
+     *
+     * @var int
+     */
+	public function issue($out) {
+	    $current = $this->field('quantity');
+	    $this->set('quantity', $current - $out);
+	    $this->save();	
+	}
+	
+	
+	/* A product receipt is the physical inbound movement of goods or materials 
+	 * into the warehouse. It is a goods movement that is used to post product 
+	 * received from external vendors or from in-plant production. 
+	 * 
+	 * All product receipts result in an increase of stock in the warehouse.
+	 *
+     * @var int
+     */
+	public function receipt($in) {
+	    $current = $this->field('quantity');
+	    $this->set('quantity', $current + $in);
+	    $this->save();	
+	}
 }

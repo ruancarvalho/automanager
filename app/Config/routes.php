@@ -53,4 +53,8 @@
  * Load the CakePHP default routes. Remove this if you do not want to use
  * the built-in default routes.
  */
+ 
+//	Router::mapResources("products");
+//	Router::parseExtensions();
+	
 	require CAKE . 'Config' . DS . 'routes.php';

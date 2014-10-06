@@ -31,7 +31,7 @@ class ReportsController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Product', 'Order');
+	public $uses = array('ReportDRE');
 
 	public function beforeFilter()
 	{
@@ -45,12 +45,50 @@ class ReportsController extends AppController {
  * @param mixed What page to display
  * @return void
  */
-	public function display() {
+	public function index() {
 
 	}
-
-	public function dre($type = null) {
+	
+/**
+ * @param mixed What report to display
+ *      - month is current month
+ *      - quarter is the last three months
+ *      - year is the current year
+ */
+	public function dre($type = null, $year = null, $month = null) {
+	
+	    $results = array('ReportDRE' => array());
+	
+        if ($type != null) {
+        
+            if ($type == 'month') {
+            
+                $results = $this->ReportDRE->find('first', array(
+                    'conditions' => array(
+	                    'ReportDRE.year' => $year,
+	                    'ReportDRE.month' => $month,
+	                )
+	            ));
+            
+            } elseif ($type == 'quarter') {
+            
+            } elseif ($type == 'year') {
+            
+            }
+            
+        } else {
+            $year = date('Y');
+            $month = date('m');
+            
+            $results = $this->ReportDRE->find('first', array(
+                'conditions' => array(
+	            'ReportDRE.year' => $year,
+	            'ReportDRE.month' => $month,
+	            )
+	        ));
 	    
+        }
 		
+		$this->set('results', $results);
 	}
 }

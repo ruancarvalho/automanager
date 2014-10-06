@@ -37,6 +37,21 @@ class Order extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
+
+		'Customer' => array(
+			'className' => 'Customer',
+			'foreignKey' => 'customer_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Vehicle' => array(
+			'className' => 'Vehicle',
+			'foreignKey' => 'vehicle_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
 		'Company' => array(
 			'className' => 'Company',
 			'foreignKey' => 'company_id',

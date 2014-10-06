@@ -31,24 +31,20 @@ $type = array(
     <div id="form-content" class="col-md-12">
         <fieldset>
 
-            <div class="form-group col-md-2">
-                <?php echo $this->Form->input('plate', array('class' => 'form-control')); ?>
-            </div><!-- .form-group -->
-
             <div class="form-group col-md-8">
-                <?php echo $this->Form->input('vehicle', array('class' => 'form-control')); ?>
+                <?php echo $this->Form->input('vehicle_id', array('class' => 'form-control')); ?>
             </div><!-- .form-group -->
 
             <div class="form-group col-md-2">
                 <?php echo $this->Form->input('km', array('class' => 'form-control')); ?>
             </div><!-- .form-group -->
 
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-4">
                 <?php echo $this->Form->input('phone', array('class' => 'form-control')); ?>
             </div><!-- .form-group -->
 
             <div class="form-group col-md-4">
-                <?php echo $this->Form->input('customer', array('class' => 'form-control')); ?>
+                <?php echo $this->Form->input('customer_id', array('class' => 'form-control')); ?>
             </div><!-- .form-group -->
 
             <div class="form-group col-md-2">

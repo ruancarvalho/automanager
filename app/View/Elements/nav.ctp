@@ -25,10 +25,11 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i> <?php echo __('Loja'); ?> <b
 							class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->params->webroot?>orders"><i class="fa fa-list"></i> <?php echo __('Orders'); ?> </a></li>
-						<li><a href="<?php echo $this->params->webroot?>orders/add"><i class="fa fa-plus"></i> <?php echo __('New Order'); ?> </a></li>
-
-						<li><a href="<?php echo $this->params->webroot?>methods"><i class="fa fa-list"></i> <?php echo __('Methods'); ?> </a></li>
+						<li><a href="<?php echo $this->params->webroot?>orders"><i class="fa"></i> <?php echo __('Orders'); ?> </a></li>
+						<li><a href="<?php echo $this->params->webroot?>orders/add"><i class="fa"></i> <?php echo __('New Order'); ?> </a></li>
+						<li><a href="<?php echo $this->params->webroot?>customers"><i class="fa"></i> <?php echo __('Customers'); ?> </a></li>
+						<li><a href="<?php echo $this->params->webroot?>vehicles"><i class="fa"></i> <?php echo __('Vehicles'); ?> </a></li>
+						<li><a href="<?php echo $this->params->webroot?>methods"><i class="fa"></i> <?php echo __('Methods'); ?> </a></li>
 					</ul>
 				</li>
 
@@ -50,7 +51,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users"></i> Reports <b
 							class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->params->webroot?>reports/dre"><i class="fa"></i>DRE Mensal</a></li>
+						<li><a href="<?php echo $this->params->webroot?>reports/dre/month/2014/09"><i class="fa"></i>DRE Mensal</a></li>
 					</ul>
 				</li>
 	

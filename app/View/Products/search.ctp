@@ -1,3 +1,5 @@
+<?php echo $this->Html->script('lib/jquery'); ?>
+
 <div class="row">
 	<div class="col-md-4">
 		<div class="row">
@@ -7,7 +9,7 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-4 pull-right">    	
+	<div class="col-md-4 pull-right">
 		<?php echo $this->Form->create(false, array('action' => 'search', 'class' => 'form-inline pull-right', 'style' => 'margin-top: 15px')); ?>
 			<?php echo $this->Form->input('Search Products', array('label' => false, 'placeholder' => __('Search Products'))); ?>
 		<?php echo $this->Form->end(__('Search')); ?>
@@ -24,27 +26,23 @@
 			<table cellpadding="0" cellspacing="0" class="table table-striped">
 				<thead>
 					<tr>
-						<th><?php echo $this->Paginator->sort('ID'); ?></th>
-						<th><?php echo $this->Paginator->sort('code'); ?></th>
+						<th width="5%"><?php echo $this->Paginator->sort('ID'); ?></th>
 						<th><?php echo $this->Paginator->sort('name'); ?></th>
-						<th><?php echo $this->Paginator->sort('brand_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('quantity'); ?></th>
-						<th><?php echo $this->Paginator->sort('minimum_price'); ?></th>
-						<th><?php echo $this->Paginator->sort('price'); ?></th>
-						<th class="actions"><?php echo __('Actions'); ?></th>
+						<th width="10%"><?php echo $this->Paginator->sort('brand_id'); ?></th>
+						<th width="10%"><?php echo $this->Paginator->sort('quantity'); ?></th>
+						<th width="10%"><?php echo $this->Paginator->sort('price'); ?></th>
+						<th class="actions" width="10%"><?php echo __('Actions'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
 <?php foreach ($products as $product): ?>
 <tr>
 	<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
-	<td><?php echo h($product['Product']['code']); ?>&nbsp;</td>
 	<td><?php echo h($product['Product']['name']); ?>
 	<td>
 		<?php echo $this->Html->link($product['Brand']['name'], array('controller' => 'brands', 'action' => 'view', $product['Brand']['id'])); ?>
 	</td>
 	<td><?php echo h($product['Product']['quantity']); ?>&nbsp;</td>
-	<td>R$ <?php echo h($product['Product']['minimum_price']); ?>&nbsp;</td>
 	<td>R$ <?php echo h($product['Product']['price']); ?>&nbsp;</td>
 	<td class="actions">
 		<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $product['Product']['id']), array('class' => 'btn btn-warning btn-xs')); ?>
@@ -81,3 +79,5 @@
 		</div>
 	</div><!-- /#page-content .col-sm-9 -->
 </div><!-- /#page-container .row-fluid -->
+
+<?php echo $this->Js->writeBuffer(); ?>

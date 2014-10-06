@@ -404,6 +404,9 @@ msgstr "Marcas"
 msgid "List Products"
 msgstr "Produtos"
 
+msgid "View Products"
+msgstr "Ver Produtos"
+
 msgid "Search Products"
 msgstr "Pesquisar Produtos"
 
@@ -771,11 +774,18 @@ msgstr "Venda"
 msgid "Orders"
 msgstr "Vendas"
 
+msgid "Orders Today!"
+msgstr "Vendas Hoje!"
+
+
 msgid "New Order"
 msgstr "Nova Venda"
 
 msgid "View Order"
 msgstr "Visualizar Venda"
+
+msgid "View Orders"
+msgstr "Ver Vendas"
 
 msgid "Order Items"
 msgstr "Itens da Venda"
@@ -785,3 +795,69 @@ msgstr "Observações"
 
 msgid "Prices Table"
 msgstr "Tabela de Preços"
+
+msgid "Customer"
+msgstr "Cliente"
+
+msgid "Customers"
+msgstr "Clientes"
+
+msgid "Add Customer"
+msgstr "Novo Cliente"
+
+msgid "Edit Customer"
+msgstr "Editar Cliente"
+
+msgid "View Customer"
+msgstr "Ver Cliente"
+
+msgid "Registry"
+msgstr "CPF/CNPJ"
+
+msgid "Address"
+msgstr "Endereço"
+
+msgid "District"
+msgstr "Bairro"
+
+msgid "Cep"
+msgstr "CEP"
+
+msgid "City"
+msgstr "Cidade"
+
+msgid "Uf"
+msgstr "UF"
+
+msgid "Ie"
+msgstr "Inscrição Estadual"
+
+msgid "View Customers"
+msgstr "Ver Clientes"
+
+msgid "Vehicles"
+msgstr "Veículos"
+
+msgid "Add Vehicle"
+msgstr "Novo Veículo"
+
+msgid "Edit Vehicle"
+msgstr "Editar Veículo"
+
+msgid "View Vehicles"
+msgstr "Ver Veículos"
+
+msgid "Vin"
+msgstr "Placa"
+
+msgid "Make"
+msgstr "Marca"
+
+msgid "Model"
+msgstr "Modelo"
+
+msgid "Year"
+msgstr "Ano"
+
+msgid "Vehicles"
+msgstr "Veículos"

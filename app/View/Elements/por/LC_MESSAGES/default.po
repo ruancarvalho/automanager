@@ -1,0 +1,753 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-07-14 20:08+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/UsersController.php:27
+msgid "Invalid username or password, try again"
+msgstr "Usuário ou senha inválidos, tente novamente"
+
+#: Controller/UsersController.php:45;77;113
+msgid "Invalid user"
+msgstr "Usuário inválido"
+
+#: Controller/UsersController.php:60;92
+msgid "The user has been saved"
+msgstr "Usuário salvo com sucesso"
+
+#: Controller/UsersController.php:97
+msgid "The user could not be saved. Please, try again."
+msgstr "Impossível salvar o usuário. Tente novamente."
+
+#: Controller/UsersController.php:118
+msgid "User deleted"
+msgstr "Usuário removido"
+
+#: Controller/UsersController.php:122
+msgid "User was not deleted"
+msgstr "Impossível remover o usuário"
+
+#: Controller/UsersController.php:157
+msgid "Invalid action"
+msgstr "Ação inválida"
+
+#: Controller/UsersController.php:206
+msgid "Remember password - "
+msgstr "Lembrar senha - "
+
+#: Controller/UsersController.php:228
+msgid "Link invalid"
+msgstr "Link inválido"
+
+#: View/Elements/flash_fail.ctp:3
+msgid "Error!"
+msgstr "Erro!"
+
+#: View/Elements/flash_success.ctp:3
+msgid "Success!"
+msgstr "Sucesso!"
+
+#: View/Elements/form_login.ctp:22
+#: View/Elements/form_users.ctp:26
+#: View/Users/home.ctp:14
+msgid "Username"
+msgstr "Usuário"
+
+#: View/Elements/form_login.ctp:23
+#: View/Elements/form_users.ctp:36
+msgid "Password"
+msgstr "Senha"
+
+#: View/Elements/form_login.ctp:34
+#: View/Users/remember_password.ctp:24
+msgid "Forgot your password?"
+msgstr "Esqueceu sua senha?"
+
+#: View/Elements/form_login.ctp:34
+#: View/Users/remember_password.ctp:31
+msgid "Remember my password"
+msgstr "Lembrar minha senha"
+
+#: View/Elements/form_users.ctp:44
+msgid "Email"
+msgstr "Email"
+
+#: View/Elements/form_users.ctp:49
+msgid "Admin"
+msgstr "Administrador"
+
+#: View/Elements/form_users.ctp:49
+msgid "Author"
+msgstr "Autor"
+
+#: View/Elements/form_users.ctp:56
+#: View/Users/change_password.ctp:50
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Search"
+msgstr "Pesquisar"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Próximo"
+
+
+#: View/Emails/html/remember_password.ctp:3
+msgid "Register new password"
+msgstr "Cadastrar nova senha"
+
+#: View/Layouts/default.ctp:49
+#: View/Users/register.ctp:2
+msgid "Register"
+msgstr "Registrar"
+
+#: View/Users/change_password.ctp:1
+msgid "Change password"
+msgstr "Alterar senha"
+
+#: View/Users/change_password.ctp:34
+msgid "New password"
+msgstr "Nova senha"
+
+#: View/Users/change_password.ctp:42
+msgid "Confirm new password"
+msgstr "Confirmar nova senha"
+
+#: View/Users/home.ctp:6
+msgid "You are logged in"
+msgstr "Você está logado"
+
+#: View/Users/home.ctp:8
+msgid "All Users"
+msgstr "Todos usuários"
+
+#: View/Users/home.ctp:15
+msgid "Role"
+msgstr "Regra"
+
+#: View/Users/home.ctp:26
+msgid "View"
+msgstr "Visualizar"
+
+#: View/Users/home.ctp:27
+msgid "Edit"
+msgstr "Editar"
+
+#: View/Users/home.ctp:28
+msgid "Delete"
+msgstr "Deletar"
+
+#: View/Users/register.ctp:6
+msgid "Add User"
+msgstr "Adicionar usuário"
+
+#: View/Users/remember_password.ctp:28
+msgid "E-mail"
+msgstr "E-mail"
+
+#: Model/User.php:validation for field username
+msgid "A username is required."
+msgstr "O usuário é obrigatório."
+
+#: Model/User.php:validation for field username;validation for field email
+msgid "This user already exists."
+msgstr "Este usuário já existe"
+
+#: Model/User.php:validation for field email
+msgid "Invalid email."
+msgstr "Email inválido."
+
+#: Model/User.php:validation for field password
+msgid "A password is required"
+msgstr "A senha é obrigatória"
+
+#: Model/User.php:validation for field role
+msgid "Please enter a valid role"
+msgstr "Por favor informe uma regra válida"
+
+#: View/Errors/error400.ctp:21
+#: View/Errors/error500.ctp:21
+msgid "Error"
+msgstr "Erro"
+
+#: View/Errors/error400.ctp:23
+msgid "The requested address %s was not found on this server."
+msgstr "O endereço %s não foi encontrado"
+
+#: View/Errors/error500.ctp:22
+msgid "An Internal Error Has Occurred."
+msgstr "Erro interno."
+
+#: webroot/test.php:87
+msgid "Debug setting does not allow access to this url."
+msgstr "As configurações de debug não permitem o acesso a esta url."
+
+#: View/Users/home.ctp:54
+msgid "Remove user"
+msgstr "Remover usuário"
+
+#: View/users/home.ctp
+msgid "Are you sure you want to delete the user "
+msgstr "Deseja realmente remover o usuário "
+
+
+#: Controller/BrandsController.php:29;61;87
+msgid "Invalid brand"
+msgstr ""
+
+#: Controller/BrandsController.php:44;65
+msgid "The brand has been saved"
+msgstr ""
+
+#: Controller/BrandsController.php:47;68
+msgid "The brand could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/BrandsController.php:91
+msgid "Brand deleted"
+msgstr ""
+
+#: Controller/BrandsController.php:94
+msgid "Brand was not deleted"
+msgstr ""
+
+#: Controller/CompaniesController.php:29;61;87
+msgid "Invalid company"
+msgstr ""
+
+#: Controller/CompaniesController.php:44;65
+msgid "The company has been saved"
+msgstr ""
+
+#: Controller/CompaniesController.php:47;68
+msgid "The company could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CompaniesController.php:91
+msgid "Company deleted"
+msgstr ""
+
+#: Controller/CompaniesController.php:94
+msgid "Company was not deleted"
+msgstr ""
+
+#: Controller/ProductsController.php:29;63;91
+msgid "Invalid product"
+msgstr ""
+
+#: Controller/ProductsController.php:44;67
+msgid "The product has been saved"
+msgstr "O Produto foi salvo"
+
+#: Controller/ProductsController.php:47;70
+msgid "The product could not be saved. Please, try again."
+msgstr "O Produto não pôde ser salvo. Por favor, tente novamente."
+
+#: Controller/ProductsController.php:95
+msgid "Product deleted"
+msgstr ""
+
+#: Controller/ProductsController.php:98
+msgid "Product was not deleted"
+msgstr ""
+
+#: Controller/ServiceOrdersController.php:29;63;91
+msgid "Invalid service order"
+msgstr ""
+
+#: Controller/ServiceOrdersController.php:44;67
+msgid "The service order has been saved"
+msgstr ""
+
+#: Controller/ServiceOrdersController.php:47;70
+msgid "The service order could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ServiceOrdersController.php:95
+msgid "Service order deleted"
+msgstr ""
+
+#: Controller/ServiceOrdersController.php:98
+msgid "Service order was not deleted"
+msgstr ""
+
+#: Controller/UsersController.php:24
+msgid "Username or password is incorrect"
+msgstr ""
+
+#: Controller/UsersController.php:60;92;118
+msgid "Invalid user"
+msgstr ""
+
+#: Controller/UsersController.php:75;96
+msgid "The user has been saved"
+msgstr ""
+
+#: Controller/UsersController.php:78;99
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:122
+msgid "User deleted"
+msgstr ""
+
+#: Controller/UsersController.php:125
+msgid "User was not deleted"
+msgstr ""
+
+#: View/Brands/add.ctp:4
+msgid "Add Brand"
+msgstr "Adicionar Marca"
+
+#: View/Brands/add.ctp:9
+#: View/Brands/edit.ctp:10
+#: View/Companies/add.ctp:9
+#: View/Companies/edit.ctp:10
+#: View/Products/add.ctp:15
+#: View/Products/edit.ctp:16
+#: View/ServiceOrders/add.ctp:17
+#: View/ServiceOrders/edit.ctp:18
+#: View/Users/add.ctp:11
+#: View/Users/edit.ctp:12
+msgid "Submit"
+msgstr "OK"
+
+#: View/Brands/add.ctp:12
+#: View/Brands/edit.ctp:13
+#: View/Brands/index.ctp:9;40
+#: View/Brands/view.ctp:27;52
+#: View/Companies/add.ctp:12
+#: View/Companies/edit.ctp:13
+#: View/Companies/index.ctp:7;36
+#: View/Companies/view.ctp:27
+#: View/Products/add.ctp:18
+#: View/Products/edit.ctp:19
+#: View/Products/index.ctp:13;49
+#: View/Products/view.ctp:57
+#: View/ServiceOrders/add.ctp:20
+#: View/ServiceOrders/edit.ctp:21
+#: View/ServiceOrders/index.ctp:17;58
+#: View/ServiceOrders/view.ctp:67
+#: View/Users/add.ctp:14
+#: View/Users/dashboard.ctp:5
+#: View/Users/edit.ctp:15
+#: View/Users/index.ctp:7;36
+#: View/Users/view.ctp:37
+msgid "Actions"
+msgstr "Ações"
+
+#: View/Brands/add.ctp:15
+#: View/Brands/edit.ctp:17
+#: View/Brands/view.ctp:31
+#: View/Products/add.ctp:22
+#: View/Products/edit.ctp:24
+#: View/Products/index.ctp:52
+#: View/Products/view.ctp:63
+msgid "List Brands"
+msgstr "Marcas"
+
+#: View/Brands/add.ctp:16
+#: View/Brands/edit.ctp:18
+#: View/Brands/index.ctp:43
+#: View/Brands/view.ctp:33
+#: View/Products/add.ctp:21
+#: View/Products/edit.ctp:23
+#: View/Products/view.ctp:61
+msgid "List Products"
+msgstr "Produtos"
+
+msgid "Search Products"
+msgstr "Pesquisar Produtos"
+
+#: View/Brands/add.ctp:17
+#: View/Brands/edit.ctp:19
+#: View/Brands/index.ctp:44
+#: View/Brands/view.ctp:34;80
+#: View/Products/index.ctp:51
+#: View/Products/view.ctp:62
+msgid "New Product"
+msgstr "Novo Produto"
+
+#: View/Brands/edit.ctp:4
+#: View/Brands/view.ctp:29
+msgid "Edit Brand"
+msgstr "Editar Marca"
+
+#: View/Brands/edit.ctp:16
+#: View/Brands/index.ctp:20
+#: View/Brands/view.ctp:71
+#: View/Companies/edit.ctp:16
+#: View/Companies/index.ctp:16
+#: View/Products/edit.ctp:22
+#: View/Products/index.ctp:29
+#: View/ServiceOrders/edit.ctp:24
+#: View/ServiceOrders/index.ctp:38
+#: View/Users/edit.ctp:18
+#: View/Users/index.ctp:16
+msgid "Delete"
+msgstr "Excluir"
+
+#: View/Brands/edit.ctp:16
+#: View/Brands/index.ctp:20
+#: View/Brands/view.ctp:30;71
+#: View/Companies/edit.ctp:16
+#: View/Companies/index.ctp:16
+#: View/Companies/view.ctp:30
+#: View/Products/edit.ctp:22
+#: View/Products/index.ctp:29
+#: View/Products/view.ctp:60
+#: View/ServiceOrders/edit.ctp:24
+#: View/ServiceOrders/index.ctp:38
+#: View/ServiceOrders/view.ctp:70
+#: View/Users/edit.ctp:18
+#: View/Users/index.ctp:16
+#: View/Users/view.ctp:40
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Brands/index.ctp:2
+msgid "Brands"
+msgstr "Marcas"
+
+#: View/Brands/index.ctp:18
+#: View/Brands/view.ctp:69
+#: View/Companies/index.ctp:14
+#: View/Products/index.ctp:27
+#: View/ServiceOrders/index.ctp:36
+#: View/Users/index.ctp:14
+msgid "View"
+msgstr "Visualizar"
+
+#: View/Brands/index.ctp:19
+#: View/Brands/view.ctp:70
+#: View/Companies/index.ctp:15
+#: View/Products/index.ctp:28
+#: View/ServiceOrders/index.ctp:37
+#: View/Users/index.ctp:15
+msgid "Edit"
+msgstr "Editar"
+
+#: View/Brands/index.ctp:28
+#: View/Companies/index.ctp:24
+#: View/Products/index.ctp:37
+#: View/ServiceOrders/index.ctp:46
+#: View/Users/index.ctp:24
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr "Página {:page} de {:pages}, mostrando {:current} registros de um total de {:count}, começando em {:start}, terminando em {:end}"
+
+#: View/Brands/index.ctp:33
+#: View/Companies/index.ctp:29
+#: View/Products/index.ctp:42
+#: View/ServiceOrders/index.ctp:51
+#: View/Users/index.ctp:29
+msgid "previous"
+msgstr "anterior"
+
+#: View/Brands/index.ctp:35
+#: View/Companies/index.ctp:31
+#: View/Products/index.ctp:44
+#: View/ServiceOrders/index.ctp:53
+#: View/Users/index.ctp:31
+msgid "next"
+msgstr "próximo"
+
+#: View/Brands/index.ctp:42
+#: View/Brands/view.ctp:32
+#: View/Products/add.ctp:23
+#: View/Products/edit.ctp:25
+#: View/Products/index.ctp:53
+#: View/Products/view.ctp:64
+msgid "New Brand"
+msgstr "Nova Marca"
+
+#: View/Brands/view.ctp:2
+#: View/Products/view.ctp:19
+msgid "Brand"
+msgstr "Marca"
+
+#: View/Brands/view.ctp:4;42
+#: View/Companies/view.ctp:4
+#: View/Products/view.ctp:4
+#: View/ServiceOrders/view.ctp:4
+#: View/Users/view.ctp:4
+msgid "Id"
+msgstr "ID"
+
+#: View/Brands/view.ctp:9;44
+#: View/Companies/view.ctp:9
+#: View/Products/view.ctp:14
+msgid "Name"
+msgstr "Nome"
+
+#: View/Brands/view.ctp:14;50
+#: View/Companies/view.ctp:14
+#: View/Products/view.ctp:44
+#: View/ServiceOrders/view.ctp:54
+#: View/Users/view.ctp:24
+msgid "Created"
+msgstr "Criado em"
+
+#: View/Brands/view.ctp:19;51
+#: View/Companies/view.ctp:19
+#: View/Products/view.ctp:49
+#: View/ServiceOrders/view.ctp:59
+#: View/Users/view.ctp:29
+msgid "Modified"
+msgstr "Modificado em"
+
+#: View/Brands/view.ctp:30
+msgid "Delete Brand"
+msgstr ""
+
+#: View/Brands/view.ctp:38
+msgid "Related Products"
+msgstr "Produtos Relacionados"
+
+#: View/Brands/view.ctp:43
+#: View/Products/view.ctp:9
+msgid "Code"
+msgstr "Código"
+
+#: View/Brands/view.ctp:45
+msgid "Brand Id"
+msgstr "Marca"
+
+#: View/Brands/view.ctp:46
+#: View/Products/view.ctp:24
+msgid "Quantity"
+msgstr "Quantidade"
+
+#: View/Brands/view.ctp:47
+#: View/Products/view.ctp:29
+msgid "Cost Price"
+msgstr "Preço de Custo"
+
+#: View/Brands/view.ctp:48
+#: View/Products/view.ctp:34
+msgid "Minimum Price"
+msgstr "Preço Mínimo"
+
+#: View/Brands/view.ctp:49
+#: View/Products/view.ctp:39
+msgid "Price"
+msgstr "Preço"
+
+#: View/Companies/add.ctp:4
+msgid "Add Company"
+msgstr ""
+
+#: View/Companies/add.ctp:15
+#: View/Companies/edit.ctp:17
+#: View/Companies/view.ctp:31
+#: View/ServiceOrders/add.ctp:24
+#: View/ServiceOrders/edit.ctp:26
+#: View/ServiceOrders/index.ctp:61
+#: View/ServiceOrders/view.ctp:73
+msgid "List Companies"
+msgstr ""
+
+#: View/Companies/edit.ctp:4
+#: View/Companies/view.ctp:29
+msgid "Edit Company"
+msgstr ""
+
+#: View/Companies/index.ctp:2
+msgid "Companies"
+msgstr "Empresas"
+
+#: View/Companies/index.ctp:38
+#: View/Companies/view.ctp:32
+#: View/ServiceOrders/add.ctp:25
+#: View/ServiceOrders/edit.ctp:27
+#: View/ServiceOrders/index.ctp:62
+#: View/ServiceOrders/view.ctp:74
+msgid "New Company"
+msgstr ""
+
+#: View/Companies/view.ctp:2
+#: View/ServiceOrders/view.ctp:9
+msgid "Company"
+msgstr "Empresa"
+
+#: View/Companies/view.ctp:30
+msgid "Delete Company"
+msgstr ""
+
+#: View/Products/add.ctp:4
+msgid "Add Product"
+msgstr "Adicionar Produto"
+
+#: View/Products/edit.ctp:4
+#: View/Products/view.ctp:59
+msgid "Edit Product"
+msgstr "Editar Produto"
+
+#: View/Products/index.ctp:2
+#: View/Users/dashboard.ctp:7
+msgid "Products"
+msgstr "Produtos"
+
+#: View/Products/view.ctp:2
+msgid "Product"
+msgstr "Produto"
+
+#: View/Products/view.ctp:60
+msgid "Delete Product"
+msgstr "Excluir Produto"
+
+#: View/ServiceOrders/add.ctp:4
+msgid "Add Service Order"
+msgstr "Adicionar O.S."
+
+#: View/ServiceOrders/add.ctp:23
+#: View/ServiceOrders/edit.ctp:25
+#: View/ServiceOrders/view.ctp:71
+msgid "List Service Orders"
+msgstr "Ordens de Serviço"
+
+#: View/ServiceOrders/edit.ctp:4
+#: View/ServiceOrders/view.ctp:69
+msgid "Edit Service Order"
+msgstr "Editar O.S."
+
+#: View/ServiceOrders/index.ctp:2
+#: View/Users/dashboard.ctp:8
+msgid "Service Orders"
+msgstr "Ordens de Serviço"
+
+#: View/ServiceOrders/index.ctp:60
+#: View/ServiceOrders/view.ctp:72
+msgid "New Service Order"
+msgstr "Nova O.S."
+
+#: View/ServiceOrders/view.ctp:2
+msgid "Service Order"
+msgstr "Ordem de Serviço"
+
+#: View/ServiceOrders/view.ctp:14
+msgid "Date"
+msgstr "Data"
+
+#: View/ServiceOrders/view.ctp:19
+msgid "Km"
+msgstr "Km"
+
+#: View/ServiceOrders/view.ctp:24
+msgid "Vehicle"
+msgstr "Veículo"
+
+#: View/ServiceOrders/view.ctp:29
+msgid "Plate"
+msgstr "Placa"
+
+#: View/ServiceOrders/view.ctp:34
+msgid "Customer"
+msgstr "Cliente"
+
+#: View/ServiceOrders/view.ctp:39
+msgid "Phone"
+msgstr "Telefone"
+
+#: View/ServiceOrders/view.ctp:44
+msgid "Discount"
+msgstr "Desconto"
+
+#: View/ServiceOrders/view.ctp:49
+msgid "Total"
+msgstr "Total"
+
+#: View/ServiceOrders/view.ctp:70
+msgid "Delete Service Order"
+msgstr "Excluir O.S."
+
+#: View/Users/add.ctp:4
+msgid "Add User"
+msgstr "Adicionar Usuário"
+
+#: View/Users/add.ctp:17
+#: View/Users/edit.ctp:19
+#: View/Users/view.ctp:41
+msgid "List Users"
+msgstr "Usuários"
+
+#: View/Users/dashboard.ctp:9
+#: View/Users/index.ctp:2
+msgid "Users"
+msgstr "Usuários"
+
+#: View/Users/dashboard.ctp:10
+msgid "Logout"
+msgstr "Sair"
+
+#: View/Users/edit.ctp:4
+#: View/Users/view.ctp:39
+msgid "Edit User"
+msgstr "Editar Usuário"
+
+#: View/Users/index.ctp:38
+#: View/Users/view.ctp:42
+msgid "New User"
+msgstr "Novo Usuário"
+
+#: View/Users/login.ctp:5
+msgid "Please enter your username and password"
+msgstr ""
+
+#: View/Users/login.ctp:11
+msgid "Login"
+msgstr "Login"
+
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr "Usuário"
+
+#: View/Users/view.ctp:9
+msgid "Username"
+msgstr "Nome de Usuário"
+
+#: View/Users/view.ctp:14
+msgid "Password"
+msgstr "Senha"
+
+#: View/Users/view.ctp:19
+msgid "Role"
+msgstr "Perfil"
+
+#: View/Users/view.ctp:40
+msgid "Delete User"
+msgstr "Excluir Usuário"
+
+msgid "Order"
+msgstr "Venda"
+
+msgid "Orders"
+msgstr "Vendas"
+
+msgid "New Order"
+msgstr "Nova Venda"
+
+msgid "View Order"
+msgstr "Visualizar Venda"
+
+msgid "Order Items"
+msgstr "Itens da Venda"
+
+msgid "Notes"
+msgstr "Observações"
+
+msgid "Prices Table"
+msgstr "Tabela de Preços"

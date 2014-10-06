@@ -1,0 +1,4 @@
+[01-Aug-2014 15:41:08] PHP Parse error:  syntax error, unexpected '}' in /home/autozany/public_html/hzm/app/View/Elements/nav.ctp on line 86
+[01-Aug-2014 15:41:08] PHP Parse error:  syntax error, unexpected '}' in /home/autozany/public_html/hzm/app/View/Elements/nav.ctp on line 86
+[26-Sep-2014 17:42:18] PHP Fatal error:  Class 'Router' not found in /home/autozany/public_html/hzm/app/Config/core.php on line 32
+[26-Sep-2014 17:42:41] PHP Fatal error:  Class 'Router' not found in /home/autozany/public_html/hzm/app/Config/core.php on line 32

@@ -13,7 +13,15 @@ class ProductsController extends AppController {
     public $paginate = array(
         'order' => array(
             'Product.created' => 'asc'
-        )
+        ),
+        'fields' => array(
+			'Product.id', 
+			'Product.name',
+			'Brand.id', 
+			'Brand.name', 
+			'Product.quantity', 
+			'Product.price'
+		)
     );
 
     public function info() {
@@ -33,33 +41,6 @@ class ProductsController extends AppController {
         $this->set('data', $data);
     }
 
-	/**
-	 *
-	 */
-    public function search() {
-
-        if (!$this->request->is('post')) {
-			throw new MethodNotAllowedException();
-		}
-
-		if (!empty($this->request->data)) {
-        	$query = $this->request->data['Search Products'];
-	    } else {
-	        $this->Session->setFlash(__('Product not found. Please, try again.'), 'flash/error');
-			$this->redirect(array('action' => 'index'));
-	    }
-
-        $this->Paginator->settings = $this->paginate;
-		$this->Product->recursive = 0;
-
-		$data = $this->Paginator->paginate(
-		    'Product',
-		    array('Product.name LIKE' => '%' . $query . '%')
-		);
-
-    	$this->set('products', $data);
-    }
-
 /**
  * index method
  *
@@ -68,13 +49,26 @@ class ProductsController extends AppController {
 	public function index() {
 
 		$this->Paginator->settings = $this->paginate;
-
 		$this->Product->recursive = 0;
-		//$this->set('products', $this->Paginator->paginate());
-		// similar to findAll(), but fetches paged results
-    	$data = $this->Paginator->paginate('Product');
+
+		if (!empty($this->request->data['search'])) {
+
+    		$options = array(
+		    	'or' => array(
+		    		'Product.id LIKE' => '%' . $this->request->data['search'] . '%', 
+		    		'Product.name LIKE' => '%' . $this->request->data['search'] . '%', 
+		    		'Brand.name LIKE' => '%' . $this->request->data['search'] . '%'
+		    	)
+		    );	
+
+	    } else {
+	    	$options = null;
+	    }
+		
+		$data = $this->Paginator->paginate('Product', $options);    	
     	$this->set('products', $data);
 	}
+
 
 /**
  * view method

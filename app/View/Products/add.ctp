@@ -1,13 +1,12 @@
 <div class="row">
-	<div class="col-lg-10">
-		<h3><?php echo __('Products'); ?></h3>
+	<div class="col-md-10">
+		<h3><?php echo __('Add Product'); ?></h3>
 	</div>
-	<div class="col-lg-2">
-    	<?php echo $this->Html->link(__('Products List'),'/products',array('class' => 'btn btn-default pull-right','style' => 'margin-top: 15px')) ?>
+	<div class="col-md-2">
+    	<?php echo $this->Html->link(__('Products List'),'/products',array('class' => 'btn btn-primary pull-right','style' => 'margin-top: 15px')) ?>
   	</div>
- </div>
+</div>
 <hr />
-
 <div id="page-container" class="row">	
 	<div id="page-content" class="col-md-12">
 		<div class="products form">

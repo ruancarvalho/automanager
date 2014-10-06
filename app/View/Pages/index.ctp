@@ -11,7 +11,7 @@
 
 	<!-- New Order -->
 	<div class="col-lg-3">
-		<a href="<?php echo $this->params->webroot?>orders/add">
+		<a href="<?php echo $this->params->webroot?>vehicles">
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<div class="row">
@@ -19,15 +19,15 @@
 						<i class="fa fa-plus fa-5x"></i>
 					</div>
 					<div class="col-xs-6 text-right">
-						<p class="announcement-heading">12</p>
-						<p class="announcement-text">To-Do Items</p>
+						<p class="announcement-heading"><?php echo $vehicles_count?></p>
+						<p class="announcement-text"><?php echo __('Vehicles'); ?></p>
 					</div>
 				</div>
 			</div>
 			<div class="panel-footer announcement-bottom">
 				<div class="row">
 					<div class="col-xs-6">
-						Add Order
+						<?php echo __('View Vehicles'); ?>
 					</div>
 					<div class="col-xs-6 text-right">
 						<i class="fa fa-arrow-circle-right"></i>
@@ -48,7 +48,7 @@
 					</div>
 					<div class="col-xs-6 text-right">
 						<p class="announcement-heading"><?php echo $orders_count?></p>
-						<p class="announcement-text">Orders Today!</p>
+						<p class="announcement-text"><?php echo __('Orders'); ?></p>
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 				<div class="panel-footer announcement-bottom">
 					<div class="row">
 						<div class="col-xs-6">
-							View Sales
+							<?php echo __('View Orders'); ?>
 						</div>
 						<div class="col-xs-6 text-right">
 							<i class="fa fa-arrow-circle-right"></i>
@@ -76,16 +76,16 @@
 						<i class="fa fa-users fa-5x"></i>
 					</div>
 					<div class="col-xs-6 text-right">
-						<p class="announcement-heading"><?php echo $users_count?></p>
-						<p class="announcement-text">Customers</p>
+						<p class="announcement-heading"><?php echo $customers_count?></p>
+						<p class="announcement-text"><?php echo __('Customers'); ?></p>
 					</div>
 				</div>
 			</div>
-			<a href="<?php echo $this->params->webroot?>users">
+			<a href="<?php echo $this->params->webroot?>customers">
 				<div class="panel-footer announcement-bottom">
 					<div class="row">
 						<div class="col-xs-6">
-							View Customers
+							<?php echo __('View Customers'); ?>
 						</div>
 						<div class="col-xs-6 text-right">
 							<i class="fa fa-arrow-circle-right"></i>
@@ -114,7 +114,7 @@
 				<div class="panel-footer announcement-bottom">
 					<div class="row">
 						<div class="col-xs-6">
-							<?php echo __('List Products'); ?>
+							<?php echo __('View Products'); ?>
 						</div>
 						<div class="col-xs-6 text-right">
 							<i class="fa fa-arrow-circle-right"></i>

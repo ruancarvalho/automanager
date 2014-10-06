@@ -1,9 +1,9 @@
 <div class="row">
-	<div class="col-lg-10">
+	<div class="col-md-10">
 		<h3><?php echo __('Edit Product'); ?></h3>
 	</div>
-	<div class="col-lg-2">
-    	<?php echo $this->Html->link(__('Products List'),'/products',array('class' => 'btn btn-default pull-right','style' => 'margin-top: 15px')) ?>
+	<div class="col-md-2">
+    	<?php echo $this->Html->link(__('Products List'),'/products',array('class' => 'btn btn-primary pull-right','style' => 'margin-top: 15px')) ?>
   	</div>
  </div>
 <hr />
@@ -14,10 +14,7 @@
 			<?php echo $this->Form->create('Product', array('role' => 'form')); ?>
 
 				<fieldset>
-
-					<div class="form-group">
-						<?php echo $this->Form->input('id', array('class' => 'form-control')); ?>
-					</div><!-- .form-group -->
+					<?php echo $this->Form->hidden('id'); ?>
 					<div class="form-group col-md-2">
 						<?php echo $this->Form->input('code', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->

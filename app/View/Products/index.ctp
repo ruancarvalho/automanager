@@ -1,18 +1,21 @@
 <?php echo $this->Html->script('lib/jquery'); ?>
 
 <div class="row">
-	<div class="col-md-4">
-		<div class="row">
-			<div class="col-md-3"><h3><?php echo __('Products'); ?></h3></div>
-			<div class="col-md-1">
-		<?php echo $this->Html->link(__('Add Product'),'/products/add',array('class' => 'btn btn-primary btn-sm','style' => 'margin-top: 15px')) ?>
-		</div>
-		</div>
+	<div class="col-md-3">
+		<h3><?php echo __('Products'); ?></h3>
 	</div>
-	<div class="col-md-4 pull-right">
-		<?php echo $this->Form->create(false, array('action' => 'search', 'class' => 'form-inline pull-right', 'style' => 'margin-top: 15px')); ?>
-			<?php echo $this->Form->input('Search Products', array('label' => false, 'placeholder' => __('Search Products'))); ?>
-		<?php echo $this->Form->end(__('Search')); ?>
+	<div class="col-md-6">
+		<?php echo $this->Form->create('Product', array('action' => 'index', 'style' => 'margin-top: 15px')); ?>
+			<div class="input-group">
+				<input name="data[search]" class="form-control" placeholder="Pesquisar Produtos" type="text" id="search">
+				<span class="input-group-btn">
+					<button class='btn btn-primary' type="submit"><span class='glyphicon glyphicon-search'></span></button>
+				</span>
+			</div>
+		</form>
+	</div>
+	<div class="col-md-3 pull-right">
+		<?php echo $this->Html->link(__('Add Product'),'/products/add',array('class' => 'btn btn-primary pull-right','style' => 'margin-top: 15px')) ?>
   	</div>
 </div>
 

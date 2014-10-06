@@ -50,7 +50,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Product', 'Order');
+	public $uses = array('Customer', 'Product', 'Order', 'Vehicle');
 
 	public function beforeFilter()
 	{
@@ -70,8 +70,9 @@ class PagesController extends AppController {
 
 	public function index()
 	{
-		$this->set('users_count', $this->User->find('count'));
+		$this->set('vehicles_count', $this->Vehicle->find('count'));		
 		$this->set('orders_count', $this->Order->find('count'));		
+		$this->set('customers_count', $this->Customer->find('count'));
 		$this->set('products_count', $this->Product->find('count'));
 	}
 }

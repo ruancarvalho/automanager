@@ -1,9 +1,14 @@
-<h3></h3>
+<?php 
+    setlocale(LC_TIME,"portuguese");
+    $dateSrc = $results['ReportDRE']['month'] . '/01/' . $results['ReportDRE']['year'];
+    $date = strftime("%B de %Y", strtotime($dateSrc)); 
+?>
 <div class="row">
 	<div class="col-xs-6">
 		<div class="row">
 			<div class="col-xs-12">
 			    <h3>Demonstração do Resultado do Exercício</h3>
+			    <p>Exercício de <?php echo $date; ?></p>
 			</div>
 		</div>
 	</div>
@@ -23,12 +28,12 @@
 		        <tr class="active">
 		            <td><strong>1.</strong></td>
 		            <td><strong>RECEITA OPERACIONAL BRUTA</strong></td>
-		            <td><?php echo $this->Number->currency(12809.50, 'BRL'); ?></td>
+		            <td><?php echo $this->Number->currency($results['ReportDRE']['sales'], 'BRL'); ?></td>
 		        </tr>
 		        <tr>
 		            <td></td>
 		            <td>Venda de Mercadorias e/ou Prestação de Serviços</td>
-		            <td><?php echo $this->Number->currency(12809.50, 'BRL'); ?></td>
+		            <td><?php echo $this->Number->currency($results['ReportDRE']['sales'], 'BRL'); ?></td>
 		        </tr>
 		        <tr class="active">
 		            <td><strong>2.</strong></td>
@@ -38,27 +43,27 @@
 		        <tr>
 		            <td></td>
 		            <td>Abatimentos Concedidos</td>
-		            <td><?php echo $this->Number->currency(0.00, 'BRL'); ?></td>
+		            <td><?php echo $this->Number->currency($results['ReportDRE']['reduction'], 'BRL'); ?></td>
 		        </tr>
 		        <tr>
 		            <td></td>
 		            <td>Vendas Anuladas</td>
-		            <td><?php echo $this->Number->currency(0.00, 'BRL'); ?></td>
+		            <td><?php echo $this->Number->currency($results['ReportDRE']['canceled'], 'BRL'); ?></td>
 		        </tr>
 		        <tr>
 		            <td></td>
 		            <td>Descontos Incondicionais Concedidos</td>
-		            <td><?php echo $this->Number->currency(18.50, 'BRL'); ?></td>
+		            <td><?php echo $this->Number->currency($results['ReportDRE']['discounts'], 'BRL'); ?></td>
 		        </tr>
 		        <tr>
 		            <td></td>
 		            <td>Impostos e Contribuições sobre Vendas</td>
-		            <td><?php echo $this->Number->currency(0.00, 'BRL'); ?></td>
+		            <td><?php echo $this->Number->currency($results['ReportDRE']['taxes'], 'BRL'); ?></td>
 		        </tr>
 		        <tr class="active">
 		            <td><strong>3.</strong></td>
 		            <td><strong>RECEITA OPERACIONAL LÍQUIDA</strong></td>
-		            <td><?php echo $this->Number->currency(12809.50, 'BRL'); ?></td>
+		            <td><?php echo $this->Number->currency($results['ReportDRE']['sales'], 'BRL'); ?></td>
 		        </tr>
 		        <tr class="active">
 		            <td><strong>4.</strong></td>
